@@ -59,7 +59,7 @@ const Home = () => {
 
         <div className="flex flex-col justify-start items-start">
           {wallet.connected &&
-            <RecaptchaButton
+            <button
               actionName="mint"
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
@@ -75,11 +75,11 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
 
           {wallet.connected &&
-            <RecaptchaButton
+            <button
               actionName="mint5"
               disabled={isSoldOut || isMinting || !isActive}
               onClick={() => onMintMultiple(5)}
@@ -95,7 +95,7 @@ const Home = () => {
                   renderer={renderCounter}
                 />
               }
-            </RecaptchaButton>
+            </button>
           }
         </div>
         <Footer />
@@ -113,6 +113,3 @@ const renderCounter = ({ days, hours, minutes, seconds }: any) => {
 };
 
 export default Home;
-
-
-

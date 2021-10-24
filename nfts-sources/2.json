@@ -1,44 +1,60 @@
 {
-  "name": "TEST",
-  "symbol": "TSTX",
-  "description": "TEST",
+  "name": "Soltopia Beach Club Gen 0 #3",
+  "symbol": "SBCG0",
+  "description": "Octopus #2 from the collection Soltopia Beach Club Gen 0",
   "seller_fee_basis_points": 500,
-  "image": "image.png",
-  "external_url": "https://yourwebsite.com/details/0",
+  "image": "2.png",
   "attributes": [
     {
-      "value": "United States of America",
-      "trait_type": "COUNTRY"
+      "value": "beach club",
+      "trait_type": "background"
     },
     {
-      "value": "1790",
-      "trait_type": "FOUNDATION"
+      "value": "pink tattooed",
+      "trait_type": "body"
     },
     {
-      "value": "George Washington",
-      "trait_type": "NAMED FOR"
+      "value": "naked",
+      "trait_type": "clothes"
     },
     {
-      "value": "680K+",
-      "trait_type": "POP"
+      "value": "afro",
+      "trait_type": "hat"
+    },
+    {
+      "value": "black glasses",
+      "trait_type": "eyes"
+    },
+    {
+      "value": "tongue",
+      "trait_type": "mouth"
+    },
+    {
+      "value": "none",
+      "trait_type": "accessory"
+    },
+    {
+      "value": "2",
+      "trait_type": "code"
     }
   ],
   "collection": {
-    "name": "OGs",
-    "family": "Solana Candy Factory"
+    "name": "Soltopia Beach Club Gen 0",
+    "family": "Soltopia Beach Club"
   },
+
   "properties": {
     "files": [
       {
-        "uri": "image.png",
+        "uri": "2.png",
         "type": "image/png"
       }
     ],
     "category": "image",
     "creators": [
       {
-        "share": 100,
-        "address": "EZtysjsfwbRShJzAXZkHsj3PgUVrpSa1BzCqA43QFfCU"
+        "address": "8DuaJrZ4mZTWrdH4ZRWJ4RC4zrVbDZE9NF8EpjrBboEq",
+        "share": 100
       }
     ]
   }

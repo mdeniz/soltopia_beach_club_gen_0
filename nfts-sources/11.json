@@ -1,32 +1,32 @@
 {
-  "name": "Soltopia Beach Club Gen 0 #5",
+  "name": "Soltopia Beach Club Gen 0 #12",
   "symbol": "SBCG0",
-  "description": "Octopus #4 from the collection Soltopia Beach Club Gen 0",
+  "description": "Octopus #11 from the collection Soltopia Beach Club Gen 0",
   "seller_fee_basis_points": 500,
-  "image": "4.png",
+  "image": "11.png",
   "attributes": [
     {
-      "value": "cementery",
+      "value": "blue fade",
       "trait_type": "background"
     },
     {
-      "value": "zombie",
+      "value": "golden",
       "trait_type": "body"
     },
     {
-      "value": "naked",
+      "value": "suit",
       "trait_type": "clothes"
     },
     {
-      "value": "none",
+      "value": "pink punk",
       "trait_type": "hat"
     },
     {
-      "value": "zombie",
+      "value": "golden laser",
       "trait_type": "eyes"
     },
     {
-      "value": "zombie",
+      "value": "gum",
       "trait_type": "mouth"
     },
     {
@@ -34,7 +34,7 @@
       "trait_type": "accessory"
     },
     {
-      "value": "4",
+      "value": "1",
       "trait_type": "code"
     }
   ],
@@ -46,7 +46,7 @@
   "properties": {
     "files": [
       {
-        "uri": "4.png",
+        "uri": "11.png",
         "type": "image/png"
       }
     ],
