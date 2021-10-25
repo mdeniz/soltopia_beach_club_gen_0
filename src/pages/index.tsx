@@ -58,7 +58,7 @@ const Home = () => {
           <p className="text-purple-50 font-bold text-lg cursor-default">Balance: {(balance || 0).toLocaleString()} SOL</p>
         }
         {wallet.connected && !isSoldOut &&
-          <p className="text-purple-50 font-bold text-lg cursor-default">Available/Minted/Total: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
+          <p className="text-purple-50 font-bold text-lg cursor-default">Soltopians in this sale: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
         }
 
         <div className="flex flex-col justify-center items-center">
@@ -120,7 +120,7 @@ const Home = () => {
                   d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                 ></path>
               </svg>
-              Soltopians are SOLD OUT
+              Sale Finished
             </div>
           }
         </div>
