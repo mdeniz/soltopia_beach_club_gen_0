@@ -19,7 +19,7 @@ const Home = () => {
   const { isSoldOut, mintStartDate, isMinting, onMint, onMintMultiple, nftsData } = useCandyMachine()
 
   return (
-    <main className="p-5">
+    <main className="p-5 shadow-md rounded-md">
       <Toaster />
       <Head>
         <title>Solana Candy Factory</title>
@@ -38,28 +38,29 @@ const Home = () => {
           alt="Candy Image" />
 
         <span className="text-primary-500 font-bold text-2xl cursor-default">
-          Soltopia Beach Club Gen 0 Mint
+          Soltopia Beach Club Gen 0
         </span>
 
         {!wallet.connected && <span
-          className="text-gray-800 font-bold text-2xl cursor-default">
+          className="text-primary-100 font-bold text-2xl cursor-default text-center ">
           NOT CONNECTED, PLEASE CLICK SELECT WALLET...
         </span>}
 
         {wallet.connected &&
-          <p className="text-secondary-600 font-bold text-lg cursor-default">Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</p>
+          <p className="text-primary-50 font-bold text-lg cursor-default">Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</p>
         }
 
         {wallet.connected &&
           <>
-            <p className="text-gray-800 font-bold text-lg cursor-default">Balance: {(balance || 0).toLocaleString()} SOL</p>
-            <p className="text-gray-800 font-bold text-lg cursor-default">Available/Minted/Total: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
+            <p className="text-primary-50 font-bold text-lg cursor-default">Balance: {(balance || 0).toLocaleString()} SOL</p>
+            <p className="text-primary-50 font-bold text-lg cursor-default">Available/Minted/Total: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
           </>
         }
 
-        <div className="flex flex-col justify-start items-start">
+        <div className="flex flex-col justify-center items-center">
           {wallet.connected &&
             <button
+              className="text-primary-50 bg-primary-500 hover:bg-primary-700 p-3 rounded"
               actionName="mint"
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
@@ -67,7 +68,7 @@ const Home = () => {
               {isSoldOut ? (
                 "SOLD OUT"
               ) : isActive ?
-                <span>MINT {isMinting && 'LOADING...'}</span> :
+                <span className="items-center">MINT A SOLTOPIAN {isMinting && <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2"></div>}</span> :
                 <Countdown
                   date={mintStartDate}
                   onMount={({ completed }) => completed && setIsActive(true)}
@@ -78,27 +79,7 @@ const Home = () => {
             </button>
           }
 
-          {wallet.connected &&
-            <button
-              actionName="mint5"
-              disabled={isSoldOut || isMinting || !isActive}
-              onClick={() => onMintMultiple(5)}
-            >
-              {isSoldOut ? (
-                "SOLD OUT"
-              ) : isActive ?
-                <span>MINT 5 {isMinting && 'LOADING...'}</span> :
-                <Countdown
-                  date={mintStartDate}
-                  onMount={({ completed }) => completed && setIsActive(true)}
-                  onComplete={() => setIsActive(true)}
-                  renderer={renderCounter}
-                />
-              }
-            </button>
-          }
         </div>
-        <Footer />
       </div>
     </main>
   );
@@ -106,7 +87,7 @@ const Home = () => {
 
 const renderCounter = ({ days, hours, minutes, seconds }: any) => {
   return (
-    <span className="text-gray-800 font-bold text-2xl cursor-default">
+    <span className="text-white font-bold text-2xl cursor-default">
       Live in {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
     </span>
   );
