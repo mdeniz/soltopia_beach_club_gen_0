@@ -37,8 +37,8 @@ const Home = () => {
           width={200}
           alt="Candy Image" />
 
-        <span className="text-gray-800 font-bold text-2xl cursor-default">
-          THIS IS THE BEST CANDY MACHINE EVER
+        <span className="text-primary-500 font-bold text-2xl cursor-default">
+          Soltopia Beach Club Gen 0 Mint
         </span>
 
         {!wallet.connected && <span
@@ -47,7 +47,7 @@ const Home = () => {
         </span>}
 
         {wallet.connected &&
-          <p className="text-gray-800 font-bold text-lg cursor-default">Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</p>
+          <p className="text-secondary-600 font-bold text-lg cursor-default">Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</p>
         }
 
         {wallet.connected &&

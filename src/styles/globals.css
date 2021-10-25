@@ -9,7 +9,7 @@
 html,
 body,
 #__next {
-  background-color: white;
+  background-color: black;
   height: 100%;
   width : 100%;
 }
