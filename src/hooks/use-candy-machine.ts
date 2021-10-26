@@ -7,7 +7,7 @@ import useWalletBalance from "./use-wallet-balance";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { sleep } from "../utils/utility";
 
-const MINT_PRICE_SOL = Number(process.env.NEXT_MINT_PRICE_SOL)
+export const MINT_PRICE_SOL = Number(process.env.NEXT_MINT_PRICE_SOL)
 
 const treasury = new anchor.web3.PublicKey(
   process.env.NEXT_PUBLIC_TREASURY_ADDRESS!
@@ -121,7 +121,7 @@ export default function useCandyMachine() {
         );
 
         if (!status?.err) {
-          toast.success("Congratulations! Mint succeeded! Check the 'My Arts' page :)")
+          toast.success("Congratulations! Mint succeeded! :)")
         } else {
           toast.error("Mint failed! Please try again!")
         }
@@ -180,7 +180,7 @@ export default function useCandyMachine() {
         );
 
         const promiseArray = []
-        
+
 
         for (let index = 0; index < signedTransactions.length; index++) {
           const tx = signedTransactions[index];
