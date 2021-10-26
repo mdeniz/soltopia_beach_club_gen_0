@@ -29,24 +29,25 @@ const Home = () => {
 
       <Header />
 
-      <div className="flex flex-col justify-center items-center flex-1 space-y-3 mt-20">
-        <img
-          className="rounded-md shadow-lg"
-          src={`/candy.jpeg`}
-          height={200}
-          width={200}
-          alt="Soltopia Beach Club" />
-
-        <span className="text-green-500 font-bold text-2xl cursor-default">
-          First Presale
-        </span>
-
+      <div className="flex flex-col justify-center items-center flex-1 space-y-3 mt-10">
         <span className="text-purple-500 font-bold text-2xl cursor-default">
           Soltopia Beach Club Gen 0
         </span>
 
+        <span className="text-green-500 font-bold text-xl cursor-default">
+          First Presale
+        </span>
+
+        <img
+          className="rounded-md shadow-lg"
+          src={`/soltopian_silhouette_beach.png`}
+          height={250}
+          width={250}
+          alt="Soltopia Beach Club" />
+
+
         {!wallet.connected && <span
-          className="text-purple-100 font-bold text-2xl cursor-default text-center ">
+          className="text-purple-100 font-bold text-xl cursor-default text-center ">
           NOT CONNECTED, PLEASE CLICK SELECT WALLET...
         </span>}
 
@@ -57,8 +58,9 @@ const Home = () => {
         {wallet.connected &&
           <p className="text-purple-50 font-bold text-lg cursor-default">Balance: {(balance || 0).toLocaleString()} SOL</p>
         }
+
         {wallet.connected && !isSoldOut &&
-          <p className="text-purple-50 font-bold text-lg cursor-default">Soltopians in this sale: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
+          <p className="text-purple-50 font-bold text-lg cursor-default">Still {nftsData.itemsRemaining} Soltopians can be minted</p>
         }
 
         <div className="flex flex-col justify-center items-center">
@@ -69,10 +71,10 @@ const Home = () => {
               onClick={onMint}
             >
               <span>
-                <img className={isMinting ? 'animate-spin' : 'animate-pulse'} src={`/octopian_silouette.png`}/>
+                <img className={isMinting ? 'animate-spin' : 'animate-pulse'} src={`/soltopian_silhouette.png`}/>
                 {isMinting ?
                   "Minting..." :
-                  "Mint a SOLTOPIAN!"
+                  "Mint a Soltopian!"
                 }
               </span>
             </button>
@@ -86,7 +88,7 @@ const Home = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="flex-shrink-0 w-6 h-6 mx-2 stroke-current"
+                className="flex-shrink-0 w-6 h-6 mx-2 stroke-current"
               >
                 <path
                   stroke-linecap="round"
