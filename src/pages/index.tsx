@@ -20,7 +20,7 @@ const Home = () => {
   const { isSoldOut, mintStartDate, isMinting, onMint, onMintMultiple, nftsData } = useCandyMachine()
   const collection = "Soltopia Beach Club Gen 0";
   const sale_title = "First Presale";
-  const price = 0.01;
+  const price = 0.3;
 
   return (
     <main className="p-1 shadow-md">
